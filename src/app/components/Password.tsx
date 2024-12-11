@@ -7,6 +7,9 @@ import { Slider } from "./Slider";
 export default function PasswordClient() {
   const [length, setLength] = useState(0);
   const [password, setPassword] = useState<string>("password");
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
   return (
     <div className="w-[50vw] p-4">
       <h1 className="text-xl text-center mb-4">Password Generator</h1>
@@ -16,15 +19,20 @@ export default function PasswordClient() {
           <Copy className="w-4 h-4 text-indigo-500" />
         </button>
       </div>
-      <div className="border border-indigo-500 p-4">
-        <div className="flex flex-col gap-3">
-          <div className="flex justify-between">
-            <h3 className="text-sm">chacracter length</h3>
-            <h1 className="text-xl text-indigo-500">{length}</h1>
+      <form onSubmit={handleSubmit} className="border border-indigo-500 p-4">
+          <div className="flex flex-col gap-3">
+            <div className="flex justify-between">
+              <h3 className="text-sm">chacracter length</h3>
+              <h1 className="text-xl text-indigo-500">{length}</h1>
+            </div>
+            <Slider
+              value={[length]}
+              onValueChange={([length]) => setLength(length)}
+              style={{ width: "100%" }}
+            />
           </div>
-          <Slider value={[length]} onValueChange={([length]) => setLength(length)} style={{width: "100%"}} />
-        </div>
-      </div>
+          <button type="submit">submit</button>
+      </form>
     </div>
   );
 }
