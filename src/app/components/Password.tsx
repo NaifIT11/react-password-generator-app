@@ -31,7 +31,7 @@ export default function PasswordClient() {
               style={{ width: "100%" }}
             />
           </div>
-          <button type="submit">submit</button>
+          <button type="submit" className="mt-4 w-full py-3 bg-indigo-300 hover:bg-indigo-500 text-white inline-flex justify-center items-center uppercase" style={{letterSpacing: "12px"}}>generate</button>
       </form>
     </div>
   );
