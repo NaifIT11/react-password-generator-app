@@ -22,7 +22,7 @@ export default function PasswordClient() {
             <h3 className="text-sm">chacracter length</h3>
             <h1 className="text-xl text-indigo-500">{length}</h1>
           </div>
-          <Slider value={[length]} onValueChange={() => setLength(length)} style={{width: "100%"}} />
+          <Slider value={[length]} onValueChange={([length]) => setLength(length)} style={{width: "100%"}} />
         </div>
       </div>
     </div>
