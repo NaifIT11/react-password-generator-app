@@ -16,6 +16,13 @@ export default function PasswordClient() {
     }
     return password;
   };
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(password);
+    }catch(error){
+        console.error("error copying")
+    }
+}
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
@@ -24,7 +31,7 @@ export default function PasswordClient() {
       <h1 className="text-xl text-center mb-4">Password Generator</h1>
       <div className="flex justify-between border border-indigo-400 p-4 mb-4">
         <h2 className="text-xl font-bold text-indigo-300">{password}</h2>
-        <button aria-label="Copy Password">
+        <button aria-label="Copy Password" onClick={handleCopy}>
           <Copy className="w-4 h-4 text-indigo-500" />
         </button>
       </div>
