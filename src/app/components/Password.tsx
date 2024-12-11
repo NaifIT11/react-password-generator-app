@@ -29,7 +29,7 @@ export default function PasswordClient() {
     setPassword(generatePassword(length)); 
   }
   return (
-    <div className="w-[50vw] p-4">
+    <div className="w-[80vw] md:w-[50vw] p-4">
       <h1 className="text-xl text-center mb-4">Password Generator</h1>
       <div className="flex justify-between border border-indigo-400 p-4 mb-4">
         <h2 className="text-xl font-bold text-indigo-300">{password}</h2>
