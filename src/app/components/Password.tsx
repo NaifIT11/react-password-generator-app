@@ -1,8 +1,10 @@
 "use client";
 
 import { Copy } from "lucide-react";
+import { useState } from "react";
 
 export default function PasswordClient() {
+  const [length , setLength] = useState(0);
   return (
     <div className="w-[50vw] p-4">
       <h1 className="text-xl text-center mb-4">Password Generator</h1>
@@ -13,8 +15,9 @@ export default function PasswordClient() {
         </button>
       </div>
       <div className="border border-indigo-500 p-4">
-         <div className="flex gap-2">
-            
+         <div className="flex justify-between">
+            <h3 className="text-sm">chacracter length</h3>
+            <h1 className="text-xl text-indigo-500">{length}</h1>
          </div>
       </div>
     </div>
