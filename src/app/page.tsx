@@ -1,12 +1,11 @@
-import { CheckBox } from "./components/Checkbox";
-import { Slider } from "./components/Slider";
-
+import PasswordClient from "./components/Password";
 
 export default function Home() {
   return (
     <>
-       <Slider />
-       <CheckBox />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <PasswordClient />
+      </div>
     </>
-  )
+  );
 }
