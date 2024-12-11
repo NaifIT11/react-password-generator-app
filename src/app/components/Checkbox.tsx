@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import { forwardRef } from "react"
 
 
-const Slider = forwardRef<
+const CheckBox = forwardRef<
 React.ElementRef<typeof CheckboxPrimitive.Root>,
 React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -10,3 +10,9 @@ React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
         <CheckboxPrimitive.CheckboxIndicator />
     </CheckboxPrimitive.Root>
 ))
+
+CheckBox.displayName = CheckboxPrimitive.Root.displayName;
+
+
+export { CheckBox } ;
+
