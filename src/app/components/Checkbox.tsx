@@ -7,9 +7,9 @@ const CheckBox = forwardRef<
 React.ElementRef<typeof CheckboxPrimitive.Root>,
 React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
-    <CheckboxPrimitive.Root ref={ref} {...props} className="w-4 h-4 bg-white border-2 border-indigo-4000">
+    <CheckboxPrimitive.Root ref={ref} {...props} className="w-4 h-4 bg-white border border-indigo-400">
         <CheckboxPrimitive.CheckboxIndicator>
-            {props.checked && <CheckIcon className="w-3 h-3 bg-indigo-500"/>}
+          <CheckIcon className="w-4 h-4 text-indigo-500"/>
         </CheckboxPrimitive.CheckboxIndicator>
     </CheckboxPrimitive.Root>
 ))
