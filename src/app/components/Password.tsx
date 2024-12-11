@@ -26,6 +26,7 @@ export default function PasswordClient() {
 }
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setPassword(generatePassword(length)); 
   }
   return (
     <div className="w-[50vw] p-4">
