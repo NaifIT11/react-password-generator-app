@@ -7,6 +7,15 @@ import { Slider } from "./Slider";
 export default function PasswordClient() {
   const [length, setLength] = useState(0);
   const [password, setPassword] = useState<string>("password");
+  const generatePassword = (length: number): string => {
+    const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+    let password = "";
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length);
+      password += charset[randomIndex];
+    }
+    return password;
+  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
