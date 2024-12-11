@@ -19,6 +19,7 @@ export default function PasswordClient() {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(password);
+      window.alert("Password copied to clipboard!");
     }catch(error){
         console.error("error copying")
     }
